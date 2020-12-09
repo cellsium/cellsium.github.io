@@ -1,0 +1,43 @@
+.main {
+  &__devices {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    &-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-info {
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      flex-direction: column;
+      h1 {
+        font-family: $rel;
+        font-size: 30px;
+        color: #555555;
+      }
+      p {
+        font-family: $mon;
+        font-size: 16px;
+        color: #8c8c8c;
+        max-width: 690px;
+      }
+      ul {
+        padding: revert;
+        margin: 40px auto;
+      }
+      li {
+        font-family: $mon;
+        font-size: 16px;
+        color: #8c8c8c;
+        padding-left: 40px;
+        padding-bottom: 5px;
+        background-image: url(/img/icon/li-point.png);
+        background-repeat: no-repeat;
+        background-position: 0 1px;
+      }
+    }
+  }
+}

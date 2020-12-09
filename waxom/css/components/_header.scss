@@ -1,0 +1,135 @@
+.header {
+    background-image: linear-gradient(#000000a8), url(/img/bg-header.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 1140px;
+        margin-top: 40px;
+        @media (max-width: 1200px) {
+            display: none;
+        }
+        &-logo {
+            display: flex;
+            text-align: center;
+            font-family: $rel;
+            font-size: 34px;
+            color: #ffffff;
+        }
+        &-nav {
+            display: flex;
+            justify-content: space-between;
+            min-width: 700px;
+            a {
+                font-family: $mon;
+                outline: none;
+                &:hover {
+                    color: #bfab93;
+                }
+            }
+        }
+        &-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-width: 80px;
+            img {
+                width: 26px;
+                height: 27px;
+            }
+        }
+    }
+    &__slider {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        &-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            min-height: 300px;
+            height: 100%;
+            width: max-content;
+            cursor: pointer;
+        }
+        &-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            user-select: none;
+            h1 {
+                font-family: $rel;
+                font-size: 52px;
+                color: #ffffff;
+                @media (max-width: 800px) {
+                    font-size: 40px;
+                }
+            }
+            h2 {
+                font-family: $rel;
+                font-size: 36px;
+                color: #ffffff;
+                @media (max-width: 800px) {
+                    font-size: 25px;
+                }
+            }
+            p {
+                font-family: $mon;
+                font-size: 16px;
+                color: #ffffff;
+                @media (max-width: 800px) {
+                    font-size: 14px;
+                }
+            }
+        }
+        img {
+            @media (max-width: 1200px) {
+                width: 20px;
+            }
+        }
+        img:nth-child(2) {
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            cursor: pointer;
+        }
+        img:nth-child(3) {
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            cursor: pointer;
+        }
+    }
+}
+
+.btn {
+    width: 170px;
+    height: 50px;
+    font-family: $rel;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #998675;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-top: 50px;
+    box-shadow: 0px 4px 13px 7px black;
+    transition: .2s;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0px 0px 12px 3px black;
+    }
+}

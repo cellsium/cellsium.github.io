@@ -1,0 +1,59 @@
+.main {
+  margin-top: 100px;
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    &-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 280px;
+      min-height: 225px;
+      margin: 20px;
+      cursor: pointer;
+      @media (max-width:1200px) {
+        max-width: 35%;
+      }
+      @media (max-width:760px) {
+        max-width: 100%;
+      }
+
+
+      svg {
+        margin: 20px 0;
+      }
+      h2 {
+        font-family: $rel;
+        font-weight: bold;
+        font-size: 22px;
+        text-align: center;
+        color: #555555;
+        margin-bottom: 10px;
+      }
+      p {
+        font-family: $mon;
+        font-size: 14px;
+        max-width: 270px;
+        text-align: center;
+        color: #8c8c8c;
+        position: relative;
+        margin-bottom: 25px;
+      }
+      div {
+        width: 70px;
+        height: 2px;
+        background: #c7b299;
+        transition: .3s;
+      }
+      &:hover {
+        div {
+          width: 200px;
+        }
+      }
+    }
+  }
+}

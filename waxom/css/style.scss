@@ -1,0 +1,21 @@
+$mon : Montserrat;
+$rel : Raleway;
+$rob : Roboto;
+
+svg {
+  width: 50px;
+  height: 50px;
+}
+@import "components/header";
+@import "components/skip-style";
+@import "components/main";
+@import "components/ideas";
+@import "components/projects";
+@import "components/video";
+@import "components/devices";
+@import "components/statistics";
+@import "components/posts";
+
+
+
+
