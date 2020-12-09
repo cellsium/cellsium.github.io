@@ -4,8 +4,8 @@ svg {
 }
 
 .header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#000000a8)), url(/img/bg-header.jpg);
-  background-image: linear-gradient(#000000a8), url(/img/bg-header.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000000a8)), url(../img/bg-header.jpg);
+  background-image: linear-gradient(#000000a8), url(../img/bg-header.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -701,7 +701,7 @@ q:before, q:after {
           align-items: center;
   margin-top: 80px;
   height: 700px;
-  background-image: url(/img/bg-video.jpg);
+  background-image: url(../img/bg-video.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
