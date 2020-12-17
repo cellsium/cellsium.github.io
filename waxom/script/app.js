@@ -198,6 +198,7 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
             rightSlide();
         }
     }
+
     function touchDown(e) {
         a = e.changedTouches[e.changedTouches.length - 1].pageX;
     }
