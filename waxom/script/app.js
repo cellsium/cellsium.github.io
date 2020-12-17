@@ -167,6 +167,7 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
         }
         line.style.transition = transition + 's';
         line.style.transform = `translate(-${count}px)`;
+        console.log(sizeBlock);
     }
 
     function rightSlide() {

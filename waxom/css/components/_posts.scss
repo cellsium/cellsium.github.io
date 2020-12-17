@@ -52,6 +52,9 @@
             transition: .1s;
             user-select: none;
             cursor: pointer;
+            @media (max-width:375px) {
+                min-width: 355px;
+            }
             &:hover {
                 .slider__box-img {
                     img {
