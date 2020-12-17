@@ -73,7 +73,7 @@ document.querySelector('.right').addEventListener('click', right);
 
 // nextSlider
 
-// experement by                  electr0ivan@mail.ru
+// experiment by                  electr0ivan@mail.ru
 
 //  chief                         Контейнер слайдера
 //  sliderLine                    контейнер с блоками слайдера
