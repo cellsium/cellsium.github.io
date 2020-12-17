@@ -202,7 +202,7 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     line.addEventListener('mousedown', touchDown);
     line.addEventListener('touchstart', touchDown);
     line.addEventListener('mouseup', touchUp);
-    line.addEventListener('touchcancel', touchUp);
+    line.addEventListener('touchend', touchUp);
     left.addEventListener('click', leftSlide);
     right.addEventListener('click', rightSlide);
 }
