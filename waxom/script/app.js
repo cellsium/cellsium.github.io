@@ -198,7 +198,9 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     sizeLine();
 
     line.addEventListener('mousedown', touchDown);
+    line.addEventListener('touch', touchDown);
     line.addEventListener('mouseup', touchUp);
+    line.addEventListener('touchend', touchUp);
     left.addEventListener('click', leftSlide);
     right.addEventListener('click', rightSlide);
 }
