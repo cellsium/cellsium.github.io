@@ -184,6 +184,7 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
 
     function touchDown(e) {
         touch = e.clientX;
+        console.log('touch');
     }
 
     function touchUp(e) {
@@ -193,6 +194,7 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
         } else {
             rightSlide();
         }
+        console.log('up');
     }
 
     sizeLine();
