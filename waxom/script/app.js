@@ -183,16 +183,28 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     let touch = 0;
     let up = 0;
 
-    function touchDown(e) {
+    let a = 0;
+    let b = 0;
+
+    function clickDown(e) {
         touch = e.clientX;
-        touch = e.changedTouches[e.changedTouches.length - 1].pageX;
+    }
+
+    function clickUp(e) {
+        up = e.clientX;
+        if (up < touch) {
+            leftSlide();
+        } else {
+            rightSlide();
+        }
+    }
+    function touchDown(e) {
+        a = e.changedTouches[e.changedTouches.length - 1].pageX;
     }
 
     function touchUp(e) {
-        up = e.clientX;
-        up = e.changedTouches[e.changedTouches.length - 1].pageX;
-
-        if (up < touch) {
+        b = e.changedTouches[e.changedTouches.length - 1].pageX;
+        if (b < a) {
             leftSlide();
         } else {
             rightSlide();
@@ -201,9 +213,9 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
 
     sizeLine();
 
-    line.addEventListener('mousedown', touchDown);
+    line.addEventListener('mousedown', clickDown);
     line.addEventListener('touchstart', touchDown);
-    line.addEventListener('mouseup', touchUp);
+    line.addEventListener('mouseup', clickUp);
     line.addEventListener('touchend', touchUp);
     left.addEventListener('click', leftSlide);
     right.addEventListener('click', rightSlide);
