@@ -184,17 +184,18 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
 
     function touchDown(e) {
         touch = e.clientX;
-        console.log('touch');
+        touch = e.changedTouches[e.changedTouches.length - 1].pageX;
     }
 
     function touchUp(e) {
         up = e.clientX;
+        up = e.changedTouches[e.changedTouches.length - 1].pageX;
+
         if (up < touch) {
             leftSlide();
         } else {
             rightSlide();
         }
-        console.log('up');
     }
 
     sizeLine();
