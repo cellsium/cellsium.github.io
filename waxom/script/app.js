@@ -73,6 +73,8 @@ document.querySelector('.right').addEventListener('click', right);
 
 // nextSlider
 
+// experement by                  electr0ivan@mail.ru
+
 //  chief                         Контейнер слайдера
 //  sliderLine                    контейнер с блоками слайдера
 //  sliderBlock                   блок слайдера
@@ -81,10 +83,11 @@ document.querySelector('.right').addEventListener('click', right);
 //  marginBlock                   если есть margin слева и справа от блок слайдера
 //  transition                    transition для плавной прокрутки
 //  countSlideBlock               количество перелистывания блоков
-//  lineWidthBlock                сколько блоков показывать в слайдере
+//  lineWidthBlock                сколько блоков показывать в слайдере (максимум 3)
+//  adaptiv                       автоисчезновение слайдов при изменении разрешения окна (по умолчанию отключено false)
 
 
-function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, marginBlock, transition, countSlideBlock, lineWidthBlock) {
+function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, marginBlock, transition, countSlideBlock, lineWidthBlock, adaptiv = false) {
 
     const chiefSlider = document.querySelector('.' + chief);
     const line = document.querySelector('.' + sliderLine);
@@ -93,40 +96,83 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     const right = document.querySelector('.' + arrowRight);
 
     let sizeBlock;
+    let slice;
     let maxSize = 0;
     let count = 0;
-
-
 
     block.forEach(item => {
         sizeBlock = item.offsetWidth;
         maxSize += item.offsetWidth + marginBlock * 2;
     })
 
+    if (lineWidthBlock > 3) lineWidthBlock = 3;
+
+
+    if (adaptiv) {
+        window.addEventListener('load', () => {
+            if (window.screen.width >= (sizeBlock + marginBlock) * 3) {
+                lineWidthBlock = 3;
+            } else if (window.screen.width >= (sizeBlock + marginBlock) * 2) {
+                lineWidthBlock = 2;
+            } else if (window.screen.width >= (sizeBlock + marginBlock) * 1) {
+                lineWidthBlock = 1;
+            }
+            chiefSlider.style.width = (sizeBlock + (marginBlock * 2)) * lineWidthBlock + 'px';
+
+            if (lineWidthBlock == 1) {
+                slice = (maxSize - (sizeBlock + marginBlock * 2));
+            } else if (lineWidthBlock == 2) {
+                slice = (maxSize - ((sizeBlock + marginBlock * 2) * 2));
+            } else if (lineWidthBlock == 3) {
+                slice = maxSize / 2;
+            }
+        })
+        window.addEventListener('resize', () => {
+            if (window.screen.width >= (sizeBlock + marginBlock) * 3) {
+                lineWidthBlock = 3;
+            } else if (window.screen.width >= (sizeBlock + marginBlock) * 2) {
+                lineWidthBlock = 2;
+            } else if (window.screen.width >= (sizeBlock + marginBlock) * 1) {
+                lineWidthBlock = 1;
+            }
+            chiefSlider.style.width = (sizeBlock + (marginBlock * 2)) * lineWidthBlock + 'px';
+
+            if (lineWidthBlock == 1) {
+                slice = (maxSize - (sizeBlock + marginBlock * 2));
+            } else if (lineWidthBlock == 2) {
+                slice = (maxSize - ((sizeBlock + marginBlock * 2) * 2));
+            } else if (lineWidthBlock == 3) {
+                slice = maxSize / 2;
+            }
+        })
+    }
+
+    if (!adaptiv) {
+        if (lineWidthBlock == 1) {
+            slice = (maxSize - (sizeBlock + marginBlock * 2));
+        } else if (lineWidthBlock == 2) {
+            slice = (maxSize - ((sizeBlock + marginBlock * 2) * 2));
+        } else if (lineWidthBlock == 3) {
+            slice = maxSize / 2;
+        }
+    }
+
     function sizeLine() {
         chiefSlider.style.width = (sizeBlock + (marginBlock * 2)) * lineWidthBlock + 'px';
     }
 
-    if (lineWidthBlock == 1) {
-        countSlideBlock = 1;
-    }
-
-
     function leftSlide() {
-        if (count < maxSize / 2) {
+        if (count < slice) {
             count += (sizeBlock + marginBlock * 2) * countSlideBlock;
         }
         line.style.transition = transition + 's';
         line.style.transform = `translate(-${count}px)`;
-        console.log(maxSize / 2);
-
     }
 
     function rightSlide() {
         if (count != 0) {
             count -= (sizeBlock + marginBlock * 2) * countSlideBlock;
         }
-
         line.style.transition = transition + 's';
         line.style.transform = `translate(-${count}px)`;
     }
@@ -157,4 +203,4 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     right.addEventListener('click', rightSlide);
 }
 
-sliderMove('posts__slider', 'posts__slider-line', 'posts__slider-block', 'arrow-left', 'arrow-right', 10, 0.3, 1, 3);
+sliderMove('posts__slider', 'posts__slider-line', 'posts__slider-block', 'arrow-left', 'arrow-right', 10, 0.3, 1, 3, true);

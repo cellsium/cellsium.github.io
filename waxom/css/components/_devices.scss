@@ -1,43 +1,61 @@
 .main {
-  &__devices {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-    &-img {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    &__devices {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+        &-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (max-width: 500px) {
+                display: none;
+            }
+        }
+        &-info {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            @media (max-width: 500px) {
+                padding: 10px;
+            }
+            h1 {
+                font-family: $rel;
+                font-size: 30px;
+                color: #555555;
+                @media (max-width: 768px) {
+                    font-size: 22px;
+                    margin-bottom: 35px;
+                }
+            }
+            p {
+                font-family: $mon;
+                font-size: 16px;
+                color: #8c8c8c;
+                max-width: 690px;
+                @media (max-width: 768px) {
+                    font-size: 12px;
+                }
+            }
+            ul {
+                padding: revert;
+                margin: 40px auto;
+            }
+            li {
+                font-family: $mon;
+                font-size: 16px;
+                color: #8c8c8c;
+                padding-left: 40px;
+                padding-bottom: 5px;
+                background-image: url(/img/icon/li-point.png);
+                background-repeat: no-repeat;
+                background-position: 0 1px;
+                @media (max-width: 768px) {
+                    font-size: 12px;
+                }
+                @media (max-width: 500px) {
+                    background-size: 14px;
+                }
+            }
+        }
     }
-    &-info {
-      display: flex;
-      justify-content: center;
-      // align-items: center;
-      flex-direction: column;
-      h1 {
-        font-family: $rel;
-        font-size: 30px;
-        color: #555555;
-      }
-      p {
-        font-family: $mon;
-        font-size: 16px;
-        color: #8c8c8c;
-        max-width: 690px;
-      }
-      ul {
-        padding: revert;
-        margin: 40px auto;
-      }
-      li {
-        font-family: $mon;
-        font-size: 16px;
-        color: #8c8c8c;
-        padding-left: 40px;
-        padding-bottom: 5px;
-        background-image: url(/img/icon/li-point.png);
-        background-repeat: no-repeat;
-        background-position: 0 1px;
-      }
-    }
-  }
 }
