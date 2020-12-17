@@ -183,8 +183,8 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     let touch = 0;
     let up = 0;
 
-    let a = 0;
-    let b = 0;
+    let touchD = 0;
+    let touchU = 0;
 
     function clickDown(e) {
         touch = e.clientX;
@@ -200,12 +200,12 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     }
 
     function touchDown(e) {
-        a = e.changedTouches[e.changedTouches.length - 1].pageX;
+        touchD = e.changedTouches[e.changedTouches.length - 1].pageX;
     }
 
     function touchUp(e) {
-        b = e.changedTouches[e.changedTouches.length - 1].pageX;
-        if (b < a) {
+        touchU = e.changedTouches[e.changedTouches.length - 1].pageX;
+        if (touchU < touchD) {
             leftSlide();
         } else {
             rightSlide();
