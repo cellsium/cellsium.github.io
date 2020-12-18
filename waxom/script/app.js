@@ -182,9 +182,6 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     let touch = 0;
     let up = 0;
 
-    // let touchD = 0;
-    // let touchU = 0;
-
     function clickDown(e) {
         touch = e.clientX;
     }
@@ -197,19 +194,6 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
             rightSlide();
         }
     }
-
-    // function touchDown(e) {
-    //     touchD = e.changedTouches[e.changedTouches.length - 1].pageX;
-    // }
-
-    // function touchUp(e) {
-    //     touchU = e.changedTouches[e.changedTouches.length - 1].pageX;
-    //     if (touchU < touchD) {
-    //         leftSlide();
-    //     } else {
-    //         rightSlide();
-    //     }
-    // }
 
     sizeLine();
 
@@ -254,9 +238,7 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     // =====================
 
     line.addEventListener('mousedown', clickDown);
-    // line.addEventListener('touchstart', touchDown);
     line.addEventListener('mouseup', clickUp);
-    // line.addEventListener('touchend', touchUp);
     left.addEventListener('click', leftSlide);
     right.addEventListener('click', rightSlide);
 }
