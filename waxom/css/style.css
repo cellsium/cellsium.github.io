@@ -1157,6 +1157,12 @@ q:before, q:after {
   min-width: 70px;
 }
 
+@media (max-width: 768px) {
+  .posts__slider-arrow {
+    display: none;
+  }
+}
+
 .slider__box-date {
   position: absolute;
   top: 20px;

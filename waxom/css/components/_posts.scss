@@ -88,6 +88,9 @@
             align-items: center;
             margin-top: 50px;
             min-width: 70px;
+            @media (max-width:768px) {
+                display: none;
+            }
         }
     }
 }
