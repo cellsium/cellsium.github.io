@@ -179,24 +179,24 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
 
     // управление мышкой
 
-    // let touch = 0;
-    // let up = 0;
+    let touch = 0;
+    let up = 0;
 
     // let touchD = 0;
     // let touchU = 0;
 
-    // function clickDown(e) {
-    //     touch = e.clientX;
-    // }
+    function clickDown(e) {
+        touch = e.clientX;
+    }
 
-    // function clickUp(e) {
-    //     up = e.clientX;
-    //     if (up < touch) {
-    //         leftSlide();
-    //     } else {
-    //         rightSlide();
-    //     }
-    // }
+    function clickUp(e) {
+        up = e.clientX;
+        if (up < touch) {
+            leftSlide();
+        } else {
+            rightSlide();
+        }
+    }
 
     // function touchDown(e) {
     //     touchD = e.changedTouches[e.changedTouches.length - 1].pageX;
@@ -237,9 +237,6 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
                             swipeFunc.touches[event.type] = true;
                             if (swipeFunc.touches.touchstart.x > -1 && swipeFunc.touches.touchmove.x > -1) {
                                 swipeFunc.touches.direction = swipeFunc.touches.touchstart.x < swipeFunc.touches.touchmove.x ? rightSlide() : leftSlide();
-
-                                // DO STUFF HERE
-                                // alert(swipeFunc.touches.direction);
                             }
                         default:
                             break;
@@ -256,9 +253,9 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     swipeFunc.init();
     // =====================
 
-    // line.addEventListener('mousedown', clickDown);
+    line.addEventListener('mousedown', clickDown);
     // line.addEventListener('touchstart', touchDown);
-    // line.addEventListener('mouseup', clickUp);
+    line.addEventListener('mouseup', clickUp);
     // line.addEventListener('touchend', touchUp);
     left.addEventListener('click', leftSlide);
     right.addEventListener('click', rightSlide);
