@@ -224,7 +224,7 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
         touchHandler: function (event) {
             var touch;
             if (typeof event !== 'undefined') {
-                // event.preventDefault();
+                event.preventDefault();
                 if (typeof event.touches !== 'undefined') {
                     touch = event.touches[0];
                     switch (event.type) {
