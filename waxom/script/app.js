@@ -197,7 +197,14 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
 
     sizeLine();
 
-    // =====================
+
+    line.addEventListener('mousedown', clickDown);
+    line.addEventListener('mouseup', clickUp);
+    left.addEventListener('click', leftSlide);
+    right.addEventListener('click', rightSlide);
+
+
+
     let swipeFunc = {
         touches: {
             "touchstart": { "x": -1, "y": -1 },
@@ -206,7 +213,7 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
             "direction": "undetermined"
         },
         touchHandler: function (event) {
-            var touch;
+            let touch;
             if (typeof event !== 'undefined') {
                 event.preventDefault();
                 if (typeof event.touches !== 'undefined') {
@@ -235,12 +242,6 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
         }
     };
     swipeFunc.init();
-    // =====================
-
-    line.addEventListener('mousedown', clickDown);
-    line.addEventListener('mouseup', clickUp);
-    left.addEventListener('click', leftSlide);
-    right.addEventListener('click', rightSlide);
 }
 
 sliderMove('posts__slider', 'posts__slider-line', 'posts__slider-block', 'arrow-left', 'arrow-right', 10, 0.3, 1, 3, true);
