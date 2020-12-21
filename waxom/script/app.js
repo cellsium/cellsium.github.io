@@ -243,4 +243,4 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
 }
 
 sliderMove('posts__slider', 'posts__slider-line', 'posts__slider-block', 'arrow-left', 'arrow-right', 10, 0.3, 1, 3, true);
-sliderMove('main-container', 'main__partners-line', 'main__partners-block', '', '', 10, 0.3, 1, 3, true);
+sliderMove('main-container', 'main__partners-line', 'main__partners-block', 'arrow-left', 'arrow-right', 10, 0.3, 1, 3, true);
