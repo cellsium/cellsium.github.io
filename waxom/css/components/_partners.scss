@@ -1,0 +1,36 @@
+.main {
+  &__partners {
+    background-image: linear-gradient(#000000a8), url(/waxom/img/partners/bg-partners.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-line {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    &-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      min-width: 370px;
+      margin: 10px;
+      min-height: 400px;
+      box-shadow: 0px 0px 0px 0px #000;
+      transition: .1s;
+      user-select: none;
+      cursor: pointer;
+    }
+  }
+  &-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
