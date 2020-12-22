@@ -90,9 +90,7 @@ svg {
 }
 
 .header__slider {
-  position: relative;
   overflow: hidden;
-  height: 100%;
   width: 100%;
 }
 
@@ -103,15 +101,6 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  min-height: 300px;
-  height: 100%;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   cursor: pointer;
 }
 
@@ -129,8 +118,8 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  min-width: 100%;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
