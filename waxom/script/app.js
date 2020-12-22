@@ -92,8 +92,8 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     const chiefSlider = document.querySelector('.' + chief);
     const line = document.querySelector('.' + sliderLine);
     const block = document.querySelectorAll('.' + sliderBlock);
-    const left = document.querySelector('.' + arrowLeft);
-    const right = document.querySelector('.' + arrowRight);
+    // const left = document.querySelector('.' + arrowLeft);
+    // const right = document.querySelector('.' + arrowRight);
 
     let sizeBlock;
     let slice;
@@ -197,12 +197,6 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
 
     sizeLine();
 
-
-    line.addEventListener('mousedown', clickDown);
-    line.addEventListener('mouseup', clickUp);
-    left.addEventListener('click', leftSlide);
-    right.addEventListener('click', rightSlide);
-
     let swipeFunc = {
         touches: {
             "touchstart": { "x": -1, "y": -1 },
@@ -210,7 +204,7 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
             "touchend": false,
             "direction": "undetermined"
         },
-        touchHandler: function (event) {
+        touchHandler: function(event) {
             let touch;
             if (typeof event !== 'undefined') {
                 event.preventDefault();
@@ -233,14 +227,24 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
                 }
             }
         },
-        init: function () {
+        init: function() {
             document.addEventListener('touchstart', swipeFunc.touchHandler, false);
             document.addEventListener('touchmove', swipeFunc.touchHandler, false);
             document.addEventListener('touchend', swipeFunc.touchHandler, false);
         }
     };
     swipeFunc.init();
+
+
+    line.addEventListener('mousedown', clickDown);
+    line.addEventListener('mouseup', clickUp);
+    if (arrowLeft != '' && arrowRight != '') {
+        document.querySelector('.' + arrowLeft).addEventListener('click', leftSlide);
+        document.querySelector('.' + arrowRight).addEventListener('click', rightSlide);
+    }
+
+
 }
 
-sliderMove('posts__slider', 'posts__slider-line', 'posts__slider-block', 'arrow-left', 'arrow-right', 10, 0.3, 1, 3, true);
-sliderMove('main-container', 'main__partners-line', 'main__partners-block', 'arrow-left', 'arrow-right', 10, 0.3, 1, 3, true);
+sliderMove('posts__slider', 'posts__slider-line', 'posts__slider-block', 'arrow-left', 'arrow-right', 10, 0.3, 1, 2, true);
+sliderMove('main-container', 'main__partners-line', 'main__partners-block', '', '', 10, 0.3, 1, 3, true);
