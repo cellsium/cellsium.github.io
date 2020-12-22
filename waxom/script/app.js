@@ -12,7 +12,7 @@
 //  adaptiv                       автоисчезновение слайдов при изменении разрешения окна (по умолчанию отключено false)
 
 
-function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, marginBlock, transition, countSlideBlock, lineWidthBlock, adaptiv = false) {
+function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, marginBlock, transition, countSlideBlock, lineWidthBlock, adaptiv = false, autoslide = false) {
 
     const chiefSlider = document.querySelector('.' + chief);
     const line = document.querySelector('.' + sliderLine);
@@ -157,6 +157,17 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     swipeFunc.init();
 
 
+    if (autoslide == true) {
+        setInterval(() => {
+            if (count < slice) {
+                leftSlide();
+            } else if (count != 0) {
+                rightSlide();
+            }
+        }, 3000);
+    };
+
+
     line.addEventListener('mousedown', clickDown);
     line.addEventListener('mouseup', clickUp);
     if (arrowLeft != '' && arrowRight != '') {
@@ -165,6 +176,6 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     };
 }
 
-sliderMove('header__slider', 'header__slider-line', 'header__slider-block', 'left', 'right', 10, 0.3, 1, 1, true);
-sliderMove('posts__slider', 'posts__slider-line', 'posts__slider-block', 'arrow-left', 'arrow-right', 10, 0.3, 1, 3, true);
-sliderMove('main-container', 'main__partners-line', 'main__partners-block', '', '', 10, 0.3, 1, 3, true);
+sliderMove('header__slider', 'header__slider-line', 'header__slider-block', 'left', 'right', 10, 0.3, 1, 1, true, false);
+sliderMove('posts__slider', 'posts__slider-line', 'posts__slider-block', 'arrow-left', 'arrow-right', 10, 0.3, 1, 3, true, false);
+sliderMove('main-container', 'main__partners-line', 'main__partners-block', '', '', 10, 0.3, 1, 3, true, true);
