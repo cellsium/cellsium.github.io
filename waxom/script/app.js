@@ -10,6 +10,7 @@
 //  countSlideBlock               количество перелистывания блоков
 //  lineWidthBlock                сколько блоков показывать в слайдере (максимум 3)
 //  adaptiv                       автоисчезновение слайдов при изменении разрешения окна (по умолчанию отключено false)
+//  autoslide                     автослайд . false - отключить, true - включить
 
 
 function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, marginBlock, transition, countSlideBlock, lineWidthBlock, adaptiv = false, autoslide = false) {
@@ -161,8 +162,8 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
         setInterval(() => {
             if (count < slice) {
                 leftSlide();
-            } else if (count != 0) {
-                rightSlide();
+            } else {
+                count = -(sizeBlock + marginBlock * 2);
             }
         }, 3000);
     };
@@ -178,4 +179,4 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
 
 sliderMove('header__slider', 'header__slider-line', 'header__slider-block', 'left', 'right', 10, 0.3, 1, 1, true, false);
 sliderMove('posts__slider', 'posts__slider-line', 'posts__slider-block', 'arrow-left', 'arrow-right', 10, 0.3, 1, 3, true, false);
-sliderMove('main-container', 'main__partners-line', 'main__partners-block', '', '', 10, 0.3, 1, 3, true, true);
+sliderMove('main-container', 'main__partners-line', 'main__partners-block', '', '', 10, 0.3, 1, 3, true, false);
