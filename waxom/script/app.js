@@ -1,78 +1,3 @@
-// const slider = document.querySelector('.header__slider');
-// const sliderLine = document.querySelector('.header__slider-line');
-// const sliderBlock = document.querySelectorAll('.header__slider-block');
-
-// let position;
-// let count;
-// let maxBlock;
-// let blockPosition = 0;
-// let maxWidth = 0;
-// let speedSlide = 0.6;
-
-// window.addEventListener('resize', size);
-
-// size();
-
-// function size() {
-//     sliderBlock.forEach(elem => {
-//         elem.style.width = window.innerWidth + 'px';
-//         maxWidth += parseFloat(elem.style.width);
-//     });
-// }
-
-// function upMouse() {
-//     if (count < 0 && blockPosition != -(maxWidth - window.innerWidth)) {
-//         blockPosition -= window.innerWidth;
-//     } else if (count > 0 && blockPosition != 0) {
-//         blockPosition += window.innerWidth;
-//     }
-//     removeEventListener('mousemove', moveMouse);
-//     removeEventListener('mousemove', downMouse);
-//     position = 0;
-//     count = 0;
-// }
-
-// function downMouse(event) {
-//     count = 0;
-//     position = 0;
-//     position = event.pageX;
-//     slider.addEventListener('mousemove', moveMouse);
-// }
-
-// function moveMouse(event) {
-//     if (position < event.pageX && position != 0) {
-//         count = count + 1;
-//     } else if (position > event.pageX && position != 0) {
-//         count = count - 1;
-//     }
-//     sliderLine.style.transition = speedSlide + 's';
-//     sliderLine.style.transform = `translate(${blockPosition}px)`;
-// }
-
-// function left() {
-//     if (blockPosition != -(maxWidth - innerWidth)) {
-//         blockPosition -= window.innerWidth;
-//     }
-//     sliderLine.style.transform = `translate(${blockPosition}px)`;
-// }
-
-// function right() {
-//     if (blockPosition != 0) {
-//         blockPosition += window.innerWidth;
-//     }
-//     sliderLine.style.transform = `translate(${blockPosition}px)`;
-// }
-
-// slider.addEventListener('mousedown', downMouse);
-// slider.addEventListener('mouseup', upMouse);
-// document.querySelector('.left').addEventListener('click', left);
-// document.querySelector('.right').addEventListener('click', right);
-
-
-
-
-// nextSlider
-
 // experiment by                  electr0ivan@mail.ru
 
 //  chief                         Контейнер слайдера
@@ -175,8 +100,6 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
         line.style.transform = `translate(-${count}px)`;
     }
 
-    // управление мышкой
-
     let touch = 0;
     let up = 0;
 
@@ -240,10 +163,8 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
         document.querySelector('.' + arrowLeft).addEventListener('click', leftSlide);
         document.querySelector('.' + arrowRight).addEventListener('click', rightSlide);
     };
-
-
 }
 
-sliderMove('header__slider', 'header__slider-line', 'header__slider-block', 'left', 'right', 10, 0.3, 1, 1, false);
+sliderMove('header__slider', 'header__slider-line', 'header__slider-block', 'left', 'right', 10, 0.3, 1, 1, true);
 sliderMove('posts__slider', 'posts__slider-line', 'posts__slider-block', 'arrow-left', 'arrow-right', 10, 0.3, 1, 3, true);
 sliderMove('main-container', 'main__partners-line', 'main__partners-block', '', '', 10, 0.3, 1, 3, true);

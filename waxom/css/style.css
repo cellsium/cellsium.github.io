@@ -1317,6 +1317,10 @@ q:before, q:after {
   cursor: pointer;
 }
 
+.main__partners-block img {
+  pointer-events: none;
+}
+
 .main-container {
   overflow: hidden;
   display: -webkit-box;
