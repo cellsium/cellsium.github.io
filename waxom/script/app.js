@@ -195,43 +195,43 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
 
     sizeLine();
 
-    // let swipeFunc = {
-    //     touches: {
-    //         "touchstart": { "x": -1, "y": -1 },
-    //         "touchmove": { "x": -1, "y": -1 },
-    //         "touchend": false,
-    //         "direction": "undetermined"
-    //     },
-    //     touchHandler: function(event) {
-    //         let touch;
-    //         if (typeof event !== 'undefined') {
-    //             event.preventDefault();
-    //             if (typeof event.touches !== 'undefined') {
-    //                 touch = event.touches[0];
-    //                 switch (event.type) {
-    //                     case 'touchstart':
-    //                     case 'touchmove':
-    //                         swipeFunc.touches[event.type].x = touch.pageX;
-    //                         swipeFunc.touches[event.type].y = touch.pageY;
-    //                         break;
-    //                     case 'touchend':
-    //                         swipeFunc.touches[event.type] = true;
-    //                         if (swipeFunc.touches.touchstart.x > -1 && swipeFunc.touches.touchmove.x > -1) {
-    //                             swipeFunc.touches.direction = swipeFunc.touches.touchstart.x < swipeFunc.touches.touchmove.x ? rightSlide() : leftSlide();
-    //                         }
-    //                     default:
-    //                         break;
-    //                 }
-    //             }
-    //         }
-    //     },
-    //     init: function() {
-    //         document.addEventListener('touchstart', swipeFunc.touchHandler, false);
-    //         document.addEventListener('touchmove', swipeFunc.touchHandler, false);
-    //         document.addEventListener('touchend', swipeFunc.touchHandler, false);
-    //     }
-    // };
-    // swipeFunc.init();
+    let swipeFunc = {
+        touches: {
+            "touchstart": { "x": -1, "y": -1 },
+            "touchmove": { "x": -1, "y": -1 },
+            "touchend": false,
+            "direction": "undetermined"
+        },
+        touchHandler: function(event) {
+            let touch;
+            if (typeof event !== 'undefined') {
+                event.preventDefault();
+                if (typeof event.touches !== 'undefined') {
+                    touch = event.touches[0];
+                    switch (event.type) {
+                        case 'touchstart':
+                        case 'touchmove':
+                            swipeFunc.touches[event.type].x = touch.pageX;
+                            swipeFunc.touches[event.type].y = touch.pageY;
+                            break;
+                        case 'touchend':
+                            swipeFunc.touches[event.type] = true;
+                            if (swipeFunc.touches.touchstart.x > -1 && swipeFunc.touches.touchmove.x > -1) {
+                                swipeFunc.touches.direction = swipeFunc.touches.touchstart.x < swipeFunc.touches.touchmove.x ? rightSlide() : leftSlide();
+                            }
+                        default:
+                            break;
+                    }
+                }
+            }
+        },
+        init: function() {
+            line.addEventListener('touchstart', swipeFunc.touchHandler, false);
+            line.addEventListener('touchmove', swipeFunc.touchHandler, false);
+            line.addEventListener('touchend', swipeFunc.touchHandler, false);
+        }
+    };
+    swipeFunc.init();
 
 
     line.addEventListener('mousedown', clickDown);
