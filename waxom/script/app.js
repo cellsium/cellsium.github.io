@@ -126,7 +126,7 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
             "touchend": false,
             "direction": "undetermined"
         },
-        touchHandler: function(event) {
+        touchHandler: function (event) {
             let touch;
             if (typeof event !== 'undefined') {
                 event.preventDefault();
@@ -149,7 +149,7 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
                 }
             }
         },
-        init: function() {
+        init: function () {
             line.addEventListener('touchstart', swipeFunc.touchHandler, false);
             line.addEventListener('touchmove', swipeFunc.touchHandler, false);
             line.addEventListener('touchend', swipeFunc.touchHandler, false);
@@ -183,18 +183,17 @@ sliderMove('main-container', 'main__partners-line', 'main__partners-block', '', 
 
 
 
-window.addEventListener('load', () => {
-    function counter(target, number, step, interval) {
-        let count = 0;
 
-        setInterval(() => {
-            if (number != count) {
-                count = count + step;
-            }
-            document.querySelector('.' + target).innerHTML = count;
-            clearInterval();
-        }, interval);
+function counter(target, number, step, interval) {
+    let count = 0;
 
-    }
-    counter('people', 3000, 50, 50);
-})
+    setInterval(() => {
+        if (number != count) {
+            count = count + step;
+        }
+        document.querySelector('.' + target).innerHTML = count;
+        clearInterval();
+    }, interval);
+}
+
+counter('people', 3000, 50, 50);
