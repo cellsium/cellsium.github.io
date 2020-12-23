@@ -248,7 +248,8 @@ ol[class] {
   padding: 0;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -269,6 +270,7 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 ul,
@@ -286,7 +288,8 @@ img {
   display: block;
 }
 
-q:before, q:after {
+q:before,
+q:after {
   content: '';
 }
 
