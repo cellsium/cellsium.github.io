@@ -9,7 +9,7 @@
 //  transition                    transition для плавной прокрутки
 //  countSlideBlock               количество перелистывания блоков
 //  lineWidthBlock                сколько блоков показывать в слайдере (максимум 3)
-//  adaptiv                       автоисчезновение слайдов при изменении разрешения окна (по умолчанию отключено false)
+//  adaptiv                       уменьшение колличества слайдов при изменении разрешения окна (по умолчанию отключено false)
 //  autoslide                     автослайд . false - отключить, true - включить
 
 
@@ -126,7 +126,7 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
             "touchend": false,
             "direction": "undetermined"
         },
-        touchHandler: function (event) {
+        touchHandler: function(event) {
             let touch;
             if (typeof event !== 'undefined') {
                 event.preventDefault();
@@ -149,7 +149,7 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
                 }
             }
         },
-        init: function () {
+        init: function() {
             line.addEventListener('touchstart', swipeFunc.touchHandler, false);
             line.addEventListener('touchmove', swipeFunc.touchHandler, false);
             line.addEventListener('touchend', swipeFunc.touchHandler, false);
@@ -182,6 +182,10 @@ sliderMove('posts__slider', 'posts__slider-line', 'posts__slider-block', 'arrow-
 sliderMove('main-container', 'main__partners-line', 'main__partners-block', '', '', 10, 0.3, 1, 3, true, false);
 
 
+//  target                         класс блока в котором нужен счетчик
+//  number                         цифра(число) до которого счетчик будет набирать
+//  step                           прибавляемое значение
+//  interval                       интервал прибавления каждого шага (мс)
 
 
 function counter(target, number, step, interval) {
