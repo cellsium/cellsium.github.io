@@ -88,7 +88,6 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     function leftSlide() {
         if (count < slice) {
             count += (sizeBlock + marginBlock * 2) * countSlideBlock;
-
         }
         line.style.transition = transition + 's';
         line.style.transform = `translate(-${count}px)`;

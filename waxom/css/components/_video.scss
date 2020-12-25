@@ -16,6 +16,9 @@
             font-family: $rel;
             font-size: 30px;
             color: #fff;
+            @media (max-width: 414px) {
+                text-align: center;
+            }
         }
         p {
             font-family: $mon;
