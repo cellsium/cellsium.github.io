@@ -86,11 +86,13 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     }
 
     function leftSlide() {
-        if (count < slice) {
+        if (count < slice + (sizeBlock + marginBlock * 2)) {
             count += (sizeBlock + marginBlock * 2) * countSlideBlock;
         }
         line.style.transition = transition + 's';
         line.style.transform = `translate(-${count}px)`;
+        console.log(slice);
+        console.log(count);
     }
 
     function rightSlide() {
@@ -160,8 +162,11 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
 
     if (autoslide == true) {
         setInterval(() => {
-            if (count < slice) {
+            if (count < slice + (sizeBlock + marginBlock * 2)) {
                 leftSlide();
+                console.log(slice);
+                console.log(count);
+
             } else {
                 count = -(sizeBlock + marginBlock * 2);
             }
