@@ -94,6 +94,12 @@ svg {
   width: 100%;
 }
 
+@media (max-width: 375px) {
+  .header__slider {
+    width: 355px;
+  }
+}
+
 .header__slider-line {
   display: -webkit-box;
   display: -ms-flexbox;

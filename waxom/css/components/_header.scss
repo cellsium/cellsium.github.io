@@ -47,10 +47,11 @@
         }
     }
     &__slider {
-        // position: relative;
         overflow: hidden;
-        // height: 100%;
         width: 100%;
+        @media (max-width: 375px) {
+            width: 355px;
+        }
         &-line {
             display: flex;
             align-items: center;
