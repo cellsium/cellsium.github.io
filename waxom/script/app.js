@@ -1,4 +1,4 @@
-// experiment by                  electr0ivan@mail.ru
+//  experiment by                  electr0ivan@mail.ru
 
 //  chief                         Контейнер слайдера
 //  sliderLine                    контейнер с блоками слайдера
@@ -91,8 +91,6 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
         }
         line.style.transition = transition + 's';
         line.style.transform = `translate(-${count}px)`;
-        console.log(slice);
-        console.log(count);
     }
 
     function rightSlide() {
@@ -196,13 +194,20 @@ sliderMove('main-container', 'main__partners-line', 'main__partners-block', '', 
 function counter(target, number, step, interval) {
     let count = 0;
 
-    setInterval(() => {
-        if (number != count) {
+    let inter = setInterval(() => {
+        if (count < number) {
             count = count + step;
         }
         document.querySelector('.' + target).innerHTML = count;
-        clearInterval();
+        if (count == number) {
+            clearInterval(inter);
+        }
     }, interval);
+
 }
 
-counter('people', 3000, 50, 50);
+counter('people', 3800, 50, 50);
+counter('coffe', 250, 50, 50);
+counter('message', 2500, 50, 50);
+counter('like', 900, 50, 50);
+counter('cap', 950, 50, 50);
