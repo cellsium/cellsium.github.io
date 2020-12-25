@@ -199,7 +199,7 @@ function counter(target, number, step, interval) {
             count = count + step;
         }
         document.querySelector('.' + target).innerHTML = count;
-        if (count == number) {
+        if (count >= number) {
             clearInterval(inter);
         }
     }, interval);
