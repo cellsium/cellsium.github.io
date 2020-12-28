@@ -100,7 +100,7 @@ svg {
 .header__line-mobile {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
