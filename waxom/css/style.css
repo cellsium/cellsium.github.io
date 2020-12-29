@@ -1555,4 +1555,10 @@ q:after {
           align-items: center;
   width: 100%;
 }
+
+.lasy {
+  opacity: 0;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
 /*# sourceMappingURL=style.css.map */

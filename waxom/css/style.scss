@@ -16,3 +16,7 @@ svg {
 @import "components/statistics";
 @import "components/posts";
 @import "components/partners";
+.lasy {
+    opacity: 0;
+    transition: 2s;
+}

@@ -209,3 +209,20 @@ counter('coffe', 250, 50, 50);
 counter('message', 2500, 50, 50);
 counter('like', 900, 50, 50);
 counter('cap', 950, 50, 50);
+
+
+
+window.addEventListener('scroll', () => {
+    let lasy = document.querySelectorAll('.lasy');
+    console.log(window.innerHeight);
+
+    lasy.forEach(item => {
+        console.log(item.getBoundingClientRect().top);
+        if (item.getBoundingClientRect().top < window.innerHeight) {
+            item.style.opacity = 1;
+        }
+    })
+
+
+
+})
