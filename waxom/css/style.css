@@ -197,6 +197,9 @@ svg {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
