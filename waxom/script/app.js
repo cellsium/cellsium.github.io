@@ -178,7 +178,7 @@ function sliderMove(chief, sliderLine, sliderBlock, arrowLeft, arrowRight, margi
     };
 }
 
-sliderMove('header__slider', 'header__slider-line', 'header__slider-block', 'left', 'right', 0.1, 0.3, 1, 1, false, false);
+sliderMove('header__slider', 'header__slider-line', 'header__slider-block', 'left', 'right', 0, 0.3, 1, 1, false, false);
 sliderMove('posts__slider', 'posts__slider-line', 'posts__slider-block', 'arrow-left', 'arrow-right', 10, 0.3, 1, 3, true, false);
 sliderMove('main-container', 'main__partners-line', 'main__partners-block', '', '', 10, 0.3, 1, 3, true, false);
 
