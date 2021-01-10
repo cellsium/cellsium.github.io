@@ -3,6 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-family: Open Sans;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.active {
+  color: rgba(0, 164, 229, 1);
+}
 
 .header {
   display: flex;
@@ -49,5 +61,51 @@
       letter-spacing: 3.7px;
       color: #FFFFFF;
     }
+  }
+}
+
+.main {
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 65px;
+    &-link {
+      a {
+        letter-spacing: 1.09091px;
+        margin: 0 20px;
+      }
+    }
+  }
+  &__story {
+    &-img {
+      display: flex;
+    }
+  }
+}
+
+.img-box {
+  position: relative;
+  overflow: hidden;
+  width: 140px;
+  height: 224px;
+  margin: 10px;
+  h1 {
+    position: absolute;
+    z-index: 1;
+    font-family: Open Sans;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    width: 70px;
+    margin: 20px 0 0 15px;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: -132px;
+    height: 230px;
   }
 }
