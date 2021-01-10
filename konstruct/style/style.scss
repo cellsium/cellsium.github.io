@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  &-logo {
+    height: 20px;
+    margin-top: 41px;
+  }
+  &-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      height: 60px;
+      font-size: 60px;
+      font-family: 'Bebas Neue', cursive;
+      font-weight: 500;
+      letter-spacing: 5.70937px;
+      color: #fff;
+    }
+    p {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      color: #FFFFFF;
+    }
+  }
+  &-scroll {
+    margin-bottom: 71px;
+    p {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 3.7px;
+      color: #FFFFFF;
+    }
+  }
+}
