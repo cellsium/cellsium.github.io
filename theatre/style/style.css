@@ -1535,7 +1535,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 620px;
+  width: 646px;
 }
 
 .footer__back_contacts > form > input {
@@ -1549,7 +1549,7 @@
   outline: none;
   padding-left: 10px;
   color: #ffffff;
-  margin: 15px 30px 15px 0px;
+  margin: 15px 10px 15px 0px;
 }
 
 @media (max-width: 640px) {
