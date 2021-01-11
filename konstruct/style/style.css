@@ -86,6 +86,7 @@ a {
   font-size: 11px;
   letter-spacing: 3.7px;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .main__menu {

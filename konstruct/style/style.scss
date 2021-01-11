@@ -1,111 +1,113 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 a {
-  text-decoration: none;
-  color: #000;
-  text-transform: uppercase;
-  font-family: Open Sans;
-  font-size: 12px;
-  font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-family: Open Sans;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .active {
-  color: rgba(0, 164, 229, 1);
+    color: rgba(0, 164, 229, 1);
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background-image: url(../img/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  &-logo {
-    height: 20px;
-    margin-top: 41px;
-  }
-  &-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1 {
-      height: 60px;
-      font-size: 60px;
-      font-family: 'Bebas Neue', cursive;
-      font-weight: 500;
-      letter-spacing: 5.70937px;
-      color: #fff;
+    justify-content: space-between;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    &-logo {
+        height: 20px;
+        margin-top: 41px;
     }
-    p {
-      font-family: Open Sans;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 22px;
-      color: #FFFFFF;
+    &-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            height: 60px;
+            font-size: 60px;
+            font-family: 'Bebas Neue', cursive;
+            font-weight: 500;
+            letter-spacing: 5.70937px;
+            color: #fff;
+        }
+        p {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FFFFFF;
+        }
     }
-  }
-  &-scroll {
-    margin-bottom: 71px;
-    p {
-      font-family: Open Sans;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 11px;
-      letter-spacing: 3.7px;
-      color: #FFFFFF;
+    &-scroll {
+        margin-bottom: 71px;
+        p {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 3.7px;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
     }
-  }
 }
 
 .main {
-  &__menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 65px;
-    &-link {
-      a {
-        letter-spacing: 1.09091px;
-        margin: 0 20px;
-      }
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 65px;
+        &-link {
+            a {
+                letter-spacing: 1.09091px;
+                margin: 0 20px;
+            }
+        }
     }
-  }
-  &__story {
-    &-img {
-      display: flex;
+    &__story {
+        &-img {
+            display: flex;
+        }
     }
-  }
 }
 
 .img-box {
-  position: relative;
-  overflow: hidden;
-  width: 140px;
-  height: 224px;
-  margin: 10px;
-  h1 {
-    position: absolute;
-    z-index: 1;
-    font-family: Open Sans;
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 1px;
-    color: #fff;
-    text-transform: uppercase;
-    width: 70px;
-    margin: 20px 0 0 15px;
-  }
-  img {
-    position: absolute;
-    top: 0;
-    left: -132px;
-    height: 230px;
-  }
+    position: relative;
+    overflow: hidden;
+    width: 140px;
+    height: 224px;
+    margin: 10px;
+    h1 {
+        position: absolute;
+        z-index: 1;
+        font-family: Open Sans;
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: 1px;
+        color: #fff;
+        text-transform: uppercase;
+        width: 70px;
+        margin: 20px 0 0 15px;
+    }
+    img {
+        position: absolute;
+        top: 0;
+        left: -132px;
+        height: 230px;
+    }
 }
