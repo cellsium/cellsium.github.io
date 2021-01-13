@@ -37,6 +37,12 @@ a:hover {
           animation: jump 1s infinite ease-in-out;
 }
 
+@media (max-width: 450px) {
+  #scroll {
+    display: none;
+  }
+}
+
 @-webkit-keyframes jump {
   0% {
     bottom: 50px;

@@ -31,6 +31,9 @@ a {
     margin-left: -60px;
     bottom: 50px;
     animation: jump 1s infinite ease-in-out;
+    @media (max-width:450px) {
+        display: none;
+    }
 }
 @keyframes jump {
     0% {
