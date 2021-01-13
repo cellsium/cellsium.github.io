@@ -295,6 +295,33 @@ a {
   margin: 0 25px 0 0;
 }
 
+@media (max-width: 940px) {
+  .main__capabilities-line p {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media (max-width: 940px) {
+  .main__capabilities-line button {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 940px) {
+  .main__capabilities-line {
+    max-width: 904px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 150px;
+  }
+}
+
 .main__capabilities-box {
   width: 100%;
   display: -webkit-box;
@@ -306,6 +333,19 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 70px;
+}
+
+@media (max-width: 940px) {
+  .main__capabilities-box {
+    margin-top: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .main__capabilities-card {
@@ -339,9 +379,21 @@ a {
   color: #48555B;
 }
 
+@media (max-width: 940px) {
+  .main__capabilities-card {
+    margin: 10px;
+  }
+}
+
 @media (max-width: 1100px) {
   .main__capabilities {
     max-width: 904px;
+  }
+}
+
+@media (max-width: 940px) {
+  .main__capabilities {
+    margin-top: 50px;
   }
 }
 
@@ -483,6 +535,22 @@ a {
   cursor: pointer;
 }
 
+@media (max-width: 784px) {
+  .footer-feedback form {
+    margin: 20px 0px;
+  }
+}
+
+@media (max-width: 784px) {
+  .footer-feedback {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 150px;
+  }
+}
+
 .footer__contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -493,6 +561,8 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-top: 50px;
   width: 100%;
   height: 240px;
@@ -549,6 +619,18 @@ a {
   color: #FFFFFF;
   margin: 10px 20px;
   text-align: center;
+}
+
+@media (max-width: 784px) {
+  .footer__contacts-linc a {
+    display: none;
+  }
+}
+
+@media (max-width: 784px) {
+  .footer__contacts-linc {
+    display: none;
+  }
 }
 
 .footer__contacts-address {
