@@ -1,4 +1,4 @@
-const link = document.querySelectorAll('a');
+const link = document.querySelectorAll('.nav');
 
 link.forEach(item => {
   item.addEventListener('click', () => {
