@@ -19,20 +19,6 @@ a {
   text-decoration: none;
 }
 
-.header {
-  position: relative;
-  height: 100vh;
-  &-nav {
-    position: absolute;
-    top: 80px;
-    right: 300px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 400px;
-  }
-}
-
 .active {
   &:before {
     content: '';
@@ -241,11 +227,106 @@ a {
   }
 }
 
+.header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #000;
+  overflow: hidden;
+  &-nav {
+    z-index: 99;
+    position: absolute;
+    top: 80px;
+    right: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    a {
+      color: #fff;
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    &-block {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image:linear-gradient(#000000b4), url(../img/bg-slider.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      h1 {
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 72px;
+        text-align: center;
+        letter-spacing: 4.608px;
+        color: #FFFFFF;
+      }
+      p {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 1.28px;
+        color: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.8;
+      }
+    }
+    &-block:nth-child(1) {
+      background-image:linear-gradient(#000000b4), url(../img/bg-slider2.jpg);
+    }
+    &-block:nth-child(2) {
+      background-image:linear-gradient(#000000b4), url(../img/bg-slider3.jpg);
+    }
+  }
+  &-point {
+    z-index: 99;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    p {
+      margin: 0 10px 15px;
+      font-family: Oswald;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      letter-spacing: 1.152px;
+      color: #fff;
+      opacity: .4;
+      transform: scale(1);
+      cursor: pointer;
+    }
+  }
+}
+
+.visible {
+  opacity: 1;
+}
+.unvisible {
+  opacity: 0;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 160px;
+  margin:160px auto;
   &__we {
     position: relative;
     display: flex;
