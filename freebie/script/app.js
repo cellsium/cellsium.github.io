@@ -11,8 +11,12 @@ function toggleClass(targetItem, primaryClass, secondaryClass, outNumber, adapti
   link.forEach((item, value) => {
 
     if (adaptiv != '') {
-      item.style.width = innerWidth + 'px';
-      // item.style.height = innerHeight + 'px';
+      window.addEventListener('load', () => {
+        item.style.width = innerWidth + 'px';
+      })
+      window.addEventListener('resize', () => {
+        item.style.width = innerWidth + 'px';
+      })
     }
 
     if (outNumber != '') {

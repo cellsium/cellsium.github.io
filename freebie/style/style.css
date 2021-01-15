@@ -275,7 +275,7 @@ a {
   z-index: 99;
   position: absolute;
   top: 80px;
-  right: 300px;
+  right: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
