@@ -152,6 +152,7 @@ a {
     width: 100%;
     background-color: #FBFBFB;
     h1 {
+      position: relative;
       width: 100%;
       max-width: 1180px;
       margin-top: 120px;
@@ -162,6 +163,15 @@ a {
       font-size: 48px;
       letter-spacing: 3.072px;
       color: #252525;
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: -10px;
+        left: 3px;
+        width: 45px;
+        height: 2px;
+        background-color: #252525;
+      }
     }
     &-tablet {
       display: flex;
@@ -241,16 +251,57 @@ a {
 
 .main {
   &__works {
-    border: 1px solid black;
+    position: relative;
     max-width: 1180px;
     width: 100%;
+    h1 {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      font-family: Oswald;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      letter-spacing: 3.072px;
+      color: #252525;
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: -10px;
+        left: 3px;
+        width: 45px;
+        height: 2px;
+        background-color: #252525;
+      }
+    }
+    &-nav {
+      position: absolute;
+      left: 10px;
+      top: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 450px;
+      width: 100%;
+      a {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        letter-spacing: 0.832px;
+        color: #252525;
+        opacity: .4;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
     &-unit:nth-last-child(even) {
       position: relative;
       right: -50.5%;
       width: 584px;
       height: 556px;
-      border: 1px solid black;
-      h1 {
+      h2 {
         position: absolute;
         bottom: 160px;
         max-width: 300px;
@@ -269,13 +320,62 @@ a {
           color: #000;
         }
       }
+      @media (max-width:1200px) {
+        right: -45%;
+      }
+      @media (max-width:1024px) {
+        right: -43%;
+      }
+      @media (max-width:823px) {
+        right: -29%;
+      }
+      @media (max-width:812px) {
+        right: -28%;
+      }
+      @media (max-width:736px) {
+        right: -20.4%;
+      }
+      @media (max-width:667px) {
+        right: -12.4%;
+      }
+      @media (max-width:640px) {
+        right: -8.4%;
+      }
+      @media (max-width:414px) {
+        width: 375px;
+        height: 375px;
+        right: 0;
+        .unit-img {
+          width: 270px;
+          height: 270px;
+          img {
+            width: 510px;
+            height: 330px;
+          }
+        }
+        h1 {
+          bottom: 110px;
+          font-size: 25px;
+        }
+        .unit-info {
+          right: 20px;
+        }
+      }
     }
     &-unit:nth-last-child(odd) {
       position: relative;
       width: 584px;
       height: 556px;
-      border: 1px solid black;
-      h1 {
+      .unit-img {
+        left: 0;
+      }
+      .unit-info {
+        left: 100px;
+        p {
+          text-align: left;
+        }
+      }
+      h2 {
         position: absolute;
         bottom: 160px;
         right: 0;
@@ -295,18 +395,36 @@ a {
           color: #000;
         }
       }
+      @media (max-width:414px) {
+        width: 375px;
+        height: 375px;
+        .unit-img {
+          width: 270px;
+          height: 270px;
+          img {
+            width: 510px;
+            height: 330px;
+          }
+        }
+        h1 {
+          bottom: 110px;
+          font-size: 25px;
+        }
+        .unit-info {
+          left: 20px;
+        }
+      }
     }
   }
 }
 
 .unit {
-  &-img:nth-last-child(even) {
+  &-img {
     position: absolute;
     right: 0;
     width: 450px;
     height: 400px;
     overflow: hidden;
-    border: 1px solid black;
     img {
       position: relative;
       top: -25px;
@@ -317,49 +435,6 @@ a {
     }
   }
   &-info {
-    position: absolute;
-    right: 100px;
-    bottom: 20px;
-    p:nth-child(1) {
-      text-align: right;
-      font-family: Open Sans;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 18px;
-      letter-spacing: 1.152px;
-      color: #252525;
-    }
-    p:nth-child(2) {
-      text-align: right;
-      margin-top: 20px;
-      max-width: 330px;
-      font-family: Open Sans;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 13px;
-      letter-spacing: 0.832px;
-      color: #C2C2C2;
-    }
-  }
-}
-.unit {
-  &-img:nth-last-child(odd) {
-    position: absolute;
-    left: 0;
-    width: 450px;
-    height: 400px;
-    overflow: hidden;
-    border: 1px solid black;
-    img {
-      position: relative;
-      top: -25px;
-      left: -115px;
-      width: 690px;
-      height: 444px;
-      opacity: .4;
-    }
-  }
-  &-info:nth-last-child(odd) {
     position: absolute;
     right: 100px;
     bottom: 20px;
