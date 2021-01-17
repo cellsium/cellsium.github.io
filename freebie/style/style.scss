@@ -492,6 +492,9 @@ a {
       font-size: 48px;
       letter-spacing: 3.072px;
       color: #252525;
+      @media (max-width:768px) {
+        top: -90px;
+      }
       @media (max-width:414px) {
         top: -100px;
       }
@@ -514,6 +517,9 @@ a {
       justify-content: space-between;
       max-width: 450px;
       width: 100%;
+      @media (max-width:768px) {
+        top: 10px;
+      }
       a {
         font-family: Open Sans;
         font-style: normal;

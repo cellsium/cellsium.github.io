@@ -646,6 +646,12 @@ a {
   color: #252525;
 }
 
+@media (max-width: 768px) {
+  .main__works h1 {
+    top: -90px;
+  }
+}
+
 @media (max-width: 414px) {
   .main__works h1 {
     top: -100px;
@@ -677,6 +683,12 @@ a {
           justify-content: space-between;
   max-width: 450px;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .main__works-nav {
+    top: 10px;
+  }
 }
 
 .main__works-nav a {
