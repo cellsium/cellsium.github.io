@@ -292,6 +292,13 @@ a {
   color: #fff;
 }
 
+@media (max-width: 414px) {
+  .header-nav {
+    right: 5%;
+    width: 330px;
+  }
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -333,6 +340,12 @@ a {
   text-align: center;
   letter-spacing: 4.608px;
   color: #FFFFFF;
+}
+
+@media (max-width: 414px) {
+  .header__container-block h1 {
+    font-size: 50px;
+  }
 }
 
 .header__container-block p {
@@ -473,6 +486,16 @@ a {
   content: url(../img/we/face.jpg);
 }
 
+@media (max-width: 414px) {
+  .main__we-img div::before {
+    width: 200px;
+    height: 300px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+}
+
 .main__we-img div::after {
   z-index: -1;
   position: absolute;
@@ -481,6 +504,23 @@ a {
   bottom: 0;
   right: 222px;
   content: url(../img/we/man.jpg);
+}
+
+@media (max-width: 414px) {
+  .main__we-img div::after {
+    width: 200px;
+    height: 300px;
+    bottom: 0;
+    right: -35px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 414px) {
+  .main__we-img div {
+    width: 200px;
+    height: 300px;
+  }
 }
 
 .main__we-info {
@@ -606,6 +646,12 @@ a {
   color: #252525;
 }
 
+@media (max-width: 414px) {
+  .main__works h1 {
+    top: -100px;
+  }
+}
+
 .main__works h1::after {
   position: absolute;
   content: '';
@@ -647,6 +693,20 @@ a {
   opacity: 1;
 }
 
+@media (max-width: 414px) {
+  .main__works-nav a {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 414px) {
+  .main__works-nav {
+    left: 0;
+    top: -5px;
+    max-width: 370px;
+  }
+}
+
 .main__works-unit:nth-last-child(even) {
   position: relative;
   right: -50.5%;
@@ -664,6 +724,12 @@ a {
   font-size: 48px;
   letter-spacing: 3.072px;
   color: #252525;
+}
+
+@media (max-width: 414px) {
+  .main__works-unit:nth-last-child(even) h2 {
+    font-size: 35px;
+  }
 }
 
 .main__works-unit:nth-last-child(even):hover .unit-img img {
@@ -768,6 +834,12 @@ a {
   font-size: 48px;
   letter-spacing: 3.072px;
   color: #252525;
+}
+
+@media (max-width: 414px) {
+  .main__works-unit:nth-last-child(odd) h2 {
+    font-size: 35px;
+  }
 }
 
 .main__works-unit:nth-last-child(odd):hover .unit-img img {

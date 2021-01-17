@@ -244,6 +244,10 @@ a {
     a {
       color: #fff;
     }
+    @media (max-width:414px) {
+      right: 5%;
+      width: 330px;
+    }
   }
   &__container {
     display: flex;
@@ -270,6 +274,9 @@ a {
         text-align: center;
         letter-spacing: 4.608px;
         color: #FFFFFF;
+        @media (max-width:414px) {
+          font-size: 50px;
+        }
       }
       p {
         font-family: Open Sans;
@@ -315,6 +322,7 @@ a {
 .visible {
   opacity: 1;
 }
+
 .unvisible {
   opacity: 0;
 }
@@ -376,6 +384,13 @@ a {
           top: 0;
           left: 200px;
           content: url(../img/we/face.jpg);
+          @media (max-width:414px) {
+            width: 200px;
+            height: 300px;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+          }
         }
         &::after {
           z-index: -1;
@@ -385,6 +400,17 @@ a {
           bottom: 0;
           right: 222px;
           content: url(../img/we/man.jpg);
+          @media (max-width:414px) {
+            width: 200px;
+            height: 300px;
+            bottom: 0;
+            right: -35px;
+            overflow: hidden;
+          }
+        }
+        @media (max-width:414px) {
+          width: 200px;
+          height: 300px;
         }
       }
     }
@@ -466,6 +492,9 @@ a {
       font-size: 48px;
       letter-spacing: 3.072px;
       color: #252525;
+      @media (max-width:414px) {
+        top: -100px;
+      }
       &::after {
         position: absolute;
         content: '';
@@ -496,6 +525,14 @@ a {
         &:hover {
           opacity: 1;
         }
+        @media (max-width:414px) {
+          font-size: 10px;
+        }
+      }
+      @media (max-width:414px) {
+        left: 0;
+        top: -5px;
+        max-width: 370px;
       }
     }
     &-unit:nth-last-child(even) {
@@ -513,6 +550,9 @@ a {
         font-size: 48px;
         letter-spacing: 3.072px;
         color: #252525;
+        @media (max-width:414px) {
+          font-size: 35px;
+        }
       }
       &:hover {
         .unit-img img {
@@ -588,6 +628,9 @@ a {
         font-size: 48px;
         letter-spacing: 3.072px;
         color: #252525;
+        @media (max-width:414px) {
+          font-size: 35px;
+        }
       }
       &:hover {
         .unit-img img {
