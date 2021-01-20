@@ -362,9 +362,11 @@ a {
       -ms-flex-align: center;
           align-items: center;
   max-width: 570px;
+  margin: 5px;
 }
 
 .main__giftset {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -401,6 +403,10 @@ a {
 }
 
 .main__giftset-content {
+  opacity: 1;
+  position: absolute;
+  top: 220px;
+  right: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,6 +463,21 @@ a {
   font-size: 16px;
   text-align: start;
   color: #151D28;
+}
+
+.main__giftset-button {
+  position: absolute;
+  right: 3px;
+  top: 220px;
+  height: 460px;
+  width: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .btn {
@@ -584,5 +605,31 @@ a {
 
 .content-btn button:nth-child(2) {
   margin-left: 90px;
+}
+
+.active {
+  background-color: #DADADA;
+}
+
+.giftset__button {
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45px;
+  height: 150px;
+  margin: 1px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  color: #415167;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

@@ -261,10 +261,12 @@ a {
       justify-content: center;
       align-items: center;
       max-width: 570px;
+      margin: 5px;
     }
   }
 
   &__giftset {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -290,6 +292,12 @@ a {
       margin-bottom: 66px;
     }
     &-content {
+      opacity: 1;
+      // position: relative;
+      // left: -50px;
+      position: absolute;
+      top: 220px;
+      right: 50px;
       display: flex;
       background-color: #fff;
       width: 794px;
@@ -328,6 +336,15 @@ a {
           color: #151D28;
         }
       }
+    }
+    &-button  {
+      position: absolute;
+      right: 3px;
+      top: 220px;
+      height: 460px;
+      width: 45px;
+      display: flex;
+      flex-direction: column;
     }
   }
 }
@@ -426,5 +443,27 @@ a {
     button:nth-child(2) {
       margin-left: 90px;
     }
+  }
+}
+
+.active {
+  background-color: #DADADA;
+}
+
+.giftset {
+  &__button {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 150px;
+    margin: 1px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    color: #415167;
+    cursor: pointer;
   }
 }
