@@ -272,6 +272,7 @@ a {
     align-items: flex-end;
     padding-top: 86px;
     background-color: #EDF0F5;
+    height: 800px;
     p {
       width: 100%;
       font-family: Nunito;
@@ -290,6 +291,14 @@ a {
       text-align: center;
       color: #415167;
       margin-bottom: 66px;
+    }
+    &-lright {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 320px;
+      background-color: #fff;
     }
     &-content {
       opacity: 1;
@@ -347,6 +356,42 @@ a {
       flex-direction: column;
     }
   }
+
+  &__combo {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    padding-top: 1px;
+    p {
+      width: 100%;
+      margin-top: 80px;
+      font-family: Nunito;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      text-align: center;
+      color: #415167;
+    }
+    h1 {
+      width: 100%;
+      margin-top: 10px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 30px;
+      text-align: center;
+      color: #415167;
+    }
+    &-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 320px;
+      background-color: #415167;
+    }
+  }
+
 }
 
 .btn {
@@ -452,7 +497,7 @@ a {
 
 .giftset {
   &__button {
-    border: 1px solid black;
+    // border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -465,5 +510,40 @@ a {
     font-size: 30px;
     color: #415167;
     cursor: pointer;
+  }
+}
+
+.slider {
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+    height: 562px;
+    border: 1px solid black;
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      h2 {
+        margin-top: 10px;
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        color: #232C38;
+      }
+      p {
+        all: initial;
+        margin-top: 10px;
+        margin-bottom: 32px;
+        max-width: 276px;
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        color: #151D28;
+      }
+    }
   }
 }

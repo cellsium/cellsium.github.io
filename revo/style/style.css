@@ -379,6 +379,7 @@ a {
           align-items: flex-end;
   padding-top: 86px;
   background-color: #EDF0F5;
+  height: 800px;
 }
 
 .main__giftset p {
@@ -400,6 +401,15 @@ a {
   text-align: center;
   color: #415167;
   margin-bottom: 66px;
+}
+
+.main__giftset-lright {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 320px;
+  background-color: #fff;
 }
 
 .main__giftset-content {
@@ -478,6 +488,44 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.main__combo {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  padding-top: 1px;
+}
+
+.main__combo p {
+  width: 100%;
+  margin-top: 80px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  color: #415167;
+}
+
+.main__combo h1 {
+  width: 100%;
+  margin-top: 10px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  text-align: center;
+  color: #415167;
+}
+
+.main__combo-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 320px;
+  background-color: #415167;
 }
 
 .btn {
@@ -612,7 +660,6 @@ a {
 }
 
 .giftset__button {
-  border: 1px solid black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -631,5 +678,55 @@ a {
   font-size: 30px;
   color: #415167;
   cursor: pointer;
+}
+
+.slider__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 360px;
+  height: 562px;
+  border: 1px solid black;
+}
+
+.slider__box-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.slider__box-content h2 {
+  margin-top: 10px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  color: #232C38;
+}
+
+.slider__box-content p {
+  all: initial;
+  margin-top: 10px;
+  margin-bottom: 32px;
+  max-width: 276px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #151D28;
 }
 /*# sourceMappingURL=style.css.map */
