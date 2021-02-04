@@ -245,7 +245,9 @@ a {
   opacity: .8;
 }
 
-.team-tablet:hover .team-tablet_info h2, .team-tablet:hover .team-tablet_info h3, .team-tablet:hover .team-tablet_info p {
+.team-tablet:hover .team-tablet_info h2,
+.team-tablet:hover .team-tablet_info h3,
+.team-tablet:hover .team-tablet_info p {
   color: #000;
 }
 
@@ -511,7 +513,7 @@ a {
     width: 200px;
     height: 300px;
     bottom: 0;
-    right: -35px;
+    right: 0;
     overflow: hidden;
   }
 }
@@ -669,6 +671,7 @@ a {
 }
 
 .main__works-nav {
+  z-index: 99;
   position: absolute;
   left: 10px;
   top: 180px;
@@ -1004,7 +1007,8 @@ a {
   background-color: #70BD59;
 }
 
-.footer__feedback-together:hover h1, .footer__feedback-together:hover p {
+.footer__feedback-together:hover h1,
+.footer__feedback-together:hover p {
   color: #fff;
 }
 
@@ -1062,7 +1066,8 @@ a {
   background-color: #70BD59;
 }
 
-.footer__feedback-contact:hover h1, .footer__feedback-contact:hover p {
+.footer__feedback-contact:hover h1,
+.footer__feedback-contact:hover p {
   color: #fff;
 }
 
