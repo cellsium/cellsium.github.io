@@ -1,6 +1,6 @@
 <?php
 // Обязательно измените e-mail на свой
-$sendto = "mail@mail.ru";
+$sendto = "electr0ivan@mail.ru";
 $usermail = $_POST['email'];
 $username = $_POST['name'];
 $userphone = $_POST['phone'];
@@ -20,7 +20,7 @@ $msg .= "<p><strong>Почта:</strong> ".$usermail."</p>\r\n";
 $msg .= "<p><strong>Сообщение:</strong> ".$content."</p>\r\n";
 $msg .= "";
 // отправка сообщения
-if(@mail($sendto, $subject, $msg, $headers)) {
+if(mail($sendto, $subject, $msg, $headers)) {
 	echo "true";
 } else {
 	echo "false";
