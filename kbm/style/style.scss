@@ -113,9 +113,12 @@ body {
 }
 
 .main {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
     &__info {
-        max-width: 360px;
-        margin: 10px;
+        max-width: 435px;
+        padding: 40px;
         h1 {
             margin: 20px 0 15px 0;
             font-style: normal;
@@ -124,10 +127,47 @@ body {
             line-height: 30px;
         }
         p {
+            max-width: 360px;
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
             line-height: 25px;
         }
+    }
+    &__info:nth-child(1) {
+        position: absolute;
+        top: 170px;
+        left: 150px;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image: url(../images/bg-diplomat.jfif);
+        background-repeat: no-repeat;
+        background-size: 273% 100%;
+        background-position: -460px 0;
+        border-radius: 10px;
+        h1 {
+            max-width: 300px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 35px;
+            line-height: 40px;
+            color: #FFFFFF;
+        }
+        p {
+            font-size: 20px;
+            line-height: 30px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.slider {
+    &-line {
+        display: flex;
+        margin-top: 170px;
+        flex-wrap: wrap;
+        max-width: 950px;
     }
 }
