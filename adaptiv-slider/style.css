@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slider-line {
+    display: flex;
+    justify-content: center;
+}
+
+.slider-box {
+    margin: 5px;
+    width: 400px;
+    height: 300px;
+    background: green;
+}
