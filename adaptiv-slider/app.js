@@ -2,12 +2,22 @@ function adaptivSlider(margin) {
     const sliderLine = document.querySelector('.slider-line');
     const sliderBox = document.querySelectorAll('.slider-box');
 
-    window.addEventListener('resize', () => {
-        let summSliderBox = 0;
-        sliderBox.forEach(element => {
-            summSliderBox += element.offsetWidth;
-        });
-        sliderLine.style.width = (summSliderBox + (margin * 2)) + 'px';
-    });
+
+    let summSliderBox = 0;
+
+    function staticSize() {
+        summSliderBox = window.innerWidth;
+    }
+
+    function calcMinMaxSize() {
+        if (window.innerWidth < summSliderBox) {
+            console.log('-');
+        } else {
+            console.log('+');
+        }
+        staticSize();
+    }
+
+    window.addEventListener('resize', calcMinMaxSize);
 };
-adaptivSlider('5');
+adaptivSlider(5);
