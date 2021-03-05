@@ -181,6 +181,7 @@ body {
 }
 
 .main {
+  overflow: hidden;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,8 +192,9 @@ body {
 }
 
 .main__info {
+  width: 100%;
   max-width: 435px;
-  padding: 40px;
+  padding: 15px;
 }
 
 .main__info h1 {
@@ -211,11 +213,19 @@ body {
   line-height: 25px;
 }
 
+@media (max-width: 1470px) {
+  .main__info {
+    min-width: 280px;
+    height: 495px;
+    padding: 30px;
+  }
+}
+
 .main__info:nth-child(1) {
   position: absolute;
-  top: 170px;
+  top: 190px;
   left: 150px;
-  height: 800px;
+  height: 850px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,7 +236,7 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  background-image: url(../images/bg-diplomat.jfif);
+  background: linear-gradient(179.39deg, rgba(0, 0, 0, 0) -6.43%, #000000 79.98%), url(../images/bg-diplomat.jfif);
   background-repeat: no-repeat;
   background-size: 273% 100%;
   background-position: -460px 0;
@@ -242,10 +252,41 @@ body {
   color: #FFFFFF;
 }
 
+@media (max-width: 1470px) {
+  .main__info:nth-child(1) h1 {
+    font-size: 20px;
+  }
+}
+
 .main__info:nth-child(1) p {
   font-size: 20px;
   line-height: 30px;
   color: #FFFFFF;
+}
+
+@media (max-width: 1470px) {
+  .main__info:nth-child(1) p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 1470px) {
+  .main__info:nth-child(1) {
+    position: inherit;
+    min-width: 280px;
+    height: 495px;
+    padding: 30px;
+    background-position: -180px 0;
+  }
+}
+
+@media (max-width: 1470px) {
+  .main {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .slider-line {
@@ -255,6 +296,15 @@ body {
   margin-top: 170px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 950px;
+  max-width: 870px;
+}
+
+@media (max-width: 1470px) {
+  .slider-line {
+    overflow: hidden;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    max-width: 845px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

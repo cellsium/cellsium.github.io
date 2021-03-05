@@ -113,12 +113,14 @@ body {
 }
 
 .main {
+    overflow: hidden;
     position: relative;
     display: flex;
     justify-content: flex-end;
     &__info {
+        width: 100%;
         max-width: 435px;
-        padding: 40px;
+        padding: 15px;
         h1 {
             margin: 20px 0 15px 0;
             font-style: normal;
@@ -133,16 +135,21 @@ body {
             font-size: 16px;
             line-height: 25px;
         }
+        @media (max-width:1470px) {
+            min-width: 280px;
+            height: 495px;
+            padding: 30px;
+        }
     }
     &__info:nth-child(1) {
         position: absolute;
-        top: 170px;
+        top: 190px;
         left: 150px;
-        height: 800px;
+        height: 850px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        background-image: url(../images/bg-diplomat.jfif);
+        background: linear-gradient(179.39deg, rgba(0, 0, 0, 0) -6.43%, #000000 79.98%), url(../images/bg-diplomat.jfif);
         background-repeat: no-repeat;
         background-size: 273% 100%;
         background-position: -460px 0;
@@ -154,12 +161,29 @@ body {
             font-size: 35px;
             line-height: 40px;
             color: #FFFFFF;
+            @media (max-width: 1470px) {
+                font-size: 20px;
+            }
         }
         p {
             font-size: 20px;
             line-height: 30px;
             color: #FFFFFF;
+            @media (max-width: 1470px) {
+                font-size: 16px;
+                line-height: 25px;
+            }
         }
+        @media (max-width:1470px) {
+            position: inherit;
+            min-width: 280px;
+            height: 495px;
+            padding: 30px;
+            background-position: -180px 0;
+        }
+    }
+    @media (max-width: 1470px) {
+        justify-content: center;
     }
 }
 
@@ -168,6 +192,11 @@ body {
         display: flex;
         margin-top: 170px;
         flex-wrap: wrap;
-        max-width: 950px;
+        max-width: 870px;
+        @media (max-width: 1470px) {
+            overflow: hidden;
+            flex-wrap: nowrap;
+            max-width: 845px;
+        }
     }
 }
