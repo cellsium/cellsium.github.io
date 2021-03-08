@@ -189,11 +189,24 @@ a {
 }
 
 .harvest {
+    position: relative;
     display: flex;
+    justify-content: center;
+    padding-top: 140px;
     background: #E6E3C4;
+    &::before {
+        position: absolute;
+        content:'';
+        top: 80px;
+        left: 10%;
+        width: 80%;
+        border: 1px solid #998431;
+
+    }
     &__info {
         position: relative;
         max-width: 570px;
+        margin-right: 80px;
         p:nth-child(1) {
             font-family: Montserrat;
             font-style: normal;
@@ -214,7 +227,7 @@ a {
             &::before {
                 content: '';
                 position: absolute;
-                top: 0;
+                top: 192px;
                 left: 0;
                 width: 160px;
                 border: 1px solid;
@@ -229,6 +242,36 @@ a {
             line-height: 150%;
             color: #000000;
             max-width: 445px;
+        }
+        &-table {
+            table {
+                border-collapse: collapse;
+                border: 1px solid grey;
+            }
+            th {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 150%;
+                color: #282828;
+            }
+            h1 {
+                font-family: Playfair Display;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 150%;
+                color: #282828;
+            }
+            p {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 150%;
+                color: #282828;
+            }
         }
     }
     &__image {
