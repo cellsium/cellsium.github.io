@@ -196,12 +196,11 @@ a {
     background: #E6E3C4;
     &::before {
         position: absolute;
-        content:'';
+        content: '';
         top: 80px;
         left: 10%;
         width: 80%;
         border: 1px solid #998431;
-
     }
     &__info {
         position: relative;
@@ -242,36 +241,6 @@ a {
             line-height: 150%;
             color: #000000;
             max-width: 445px;
-        }
-        &-table {
-            table {
-                border-collapse: collapse;
-                border: 1px solid grey;
-            }
-            th {
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 14px;
-                line-height: 150%;
-                color: #282828;
-            }
-            h1 {
-                font-family: Playfair Display;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 18px;
-                line-height: 150%;
-                color: #282828;
-            }
-            p {
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 14px;
-                line-height: 150%;
-                color: #282828;
-            }
         }
     }
     &__image {

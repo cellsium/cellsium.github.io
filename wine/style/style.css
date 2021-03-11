@@ -344,38 +344,6 @@ a {
   max-width: 445px;
 }
 
-.harvest__info-table table {
-  border-collapse: collapse;
-  border: 1px solid grey;
-}
-
-.harvest__info-table th {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 150%;
-  color: #282828;
-}
-
-.harvest__info-table h1 {
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 150%;
-  color: #282828;
-}
-
-.harvest__info-table p {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 150%;
-  color: #282828;
-}
-
 .harvest__image {
   display: -webkit-box;
   display: -ms-flexbox;
