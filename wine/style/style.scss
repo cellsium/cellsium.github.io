@@ -193,11 +193,20 @@ a {
     display: flex;
     justify-content: center;
     padding-top: 140px;
+    padding-bottom: 140px;
     background: #E6E3C4;
     &::before {
         position: absolute;
         content: '';
         top: 80px;
+        left: 10%;
+        width: 80%;
+        border: 1px solid #998431;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: 80px;
         left: 10%;
         width: 80%;
         border: 1px solid #998431;
@@ -242,11 +251,88 @@ a {
             color: #000000;
             max-width: 445px;
         }
+        p:nth-child(5) {
+            margin-top: 60px;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            color: #000000;
+            max-width: 445px;
+        }
+        &-table {
+            margin-top: 20px;
+            table {
+                tr {
+                    td:nth-child(1) {
+                        padding-right: 25px;
+                        font-family: Montserrat;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 150%;
+                        color: #282828;
+                    }
+                    td:nth-child(2) {
+                        padding-left: 30px;
+                        padding-top: 10px;
+                        font-family: Playfair Display;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 18px;
+                        line-height: 150%;
+                        color: #282828;
+                        border-left: 1px solid #282828;
+                        p {
+                            font-family: Montserrat;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 14px;
+                            line-height: 150%;
+                            color: #282828;
+                            padding-bottom: 10px;
+                        }
+                    }
+                }
+                tr:nth-child(2) {
+                    td {
+                        border-top: 1px solid #282828;
+                        border-bottom: 1px solid #282828;
+                    }
+                }
+            }
+        }
+        button {
+            margin-top: 30px;
+            width: 254px;
+            height: 50px;
+            left: 405px;
+            top: 2604px;
+            border: none;
+            background: #998431;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
     }
     &__image {
         display: flex;
         flex-wrap: wrap;
         max-width: 570px;
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                transition: .5s;
+            }
+        }
         div:nth-child(1) {
             width: 540px;
             height: 500px;
@@ -254,6 +340,12 @@ a {
             background-size: cover;
             background-position: -105px 0;
             margin: 15px;
+            overflow: hidden;
+            &:hover {
+                img {
+                    transform: scale(.8);
+                }
+            }
         }
         div:nth-child(2) {
             width: 255px;
@@ -261,6 +353,12 @@ a {
             background-image: url(../images/bottle.jfif);
             background-size: cover;
             margin: 15px;
+            overflow: hidden;
+            &:hover {
+                img {
+                    transform: scale(.8);
+                }
+            }
         }
         div:nth-child(3) {
             width: 255px;
@@ -269,6 +367,12 @@ a {
             background-size: cover;
             background-position: 0 -80px;
             margin: 15px;
+            overflow: hidden;
+            &:hover {
+                img {
+                    transform: scale(.8);
+                }
+            }
         }
     }
 }

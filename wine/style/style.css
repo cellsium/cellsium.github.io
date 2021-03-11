@@ -286,6 +286,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 140px;
+  padding-bottom: 140px;
   background: #E6E3C4;
 }
 
@@ -293,6 +294,15 @@ a {
   position: absolute;
   content: '';
   top: 80px;
+  left: 10%;
+  width: 80%;
+  border: 1px solid #998431;
+}
+
+.harvest::after {
+  position: absolute;
+  content: '';
+  bottom: 80px;
   left: 10%;
   width: 80%;
   border: 1px solid #998431;
@@ -344,6 +354,76 @@ a {
   max-width: 445px;
 }
 
+.harvest__info p:nth-child(5) {
+  margin-top: 60px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000000;
+  max-width: 445px;
+}
+
+.harvest__info-table {
+  margin-top: 20px;
+}
+
+.harvest__info-table table tr td:nth-child(1) {
+  padding-right: 25px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: #282828;
+}
+
+.harvest__info-table table tr td:nth-child(2) {
+  padding-left: 30px;
+  padding-top: 10px;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  color: #282828;
+  border-left: 1px solid #282828;
+}
+
+.harvest__info-table table tr td:nth-child(2) p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: #282828;
+  padding-bottom: 10px;
+}
+
+.harvest__info-table table tr:nth-child(2) td {
+  border-top: 1px solid #282828;
+  border-bottom: 1px solid #282828;
+}
+
+.harvest__info button {
+  margin-top: 30px;
+  width: 254px;
+  height: 50px;
+  left: 405px;
+  top: 2604px;
+  border: none;
+  background: #998431;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
 .harvest__image {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -353,6 +433,23 @@ a {
   max-width: 570px;
 }
 
+.harvest__image div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.harvest__image div img {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
 .harvest__image div:nth-child(1) {
   width: 540px;
   height: 500px;
@@ -360,6 +457,12 @@ a {
   background-size: cover;
   background-position: -105px 0;
   margin: 15px;
+  overflow: hidden;
+}
+
+.harvest__image div:nth-child(1):hover img {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .harvest__image div:nth-child(2) {
@@ -368,6 +471,12 @@ a {
   background-image: url(../images/bottle.jfif);
   background-size: cover;
   margin: 15px;
+  overflow: hidden;
+}
+
+.harvest__image div:nth-child(2):hover img {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .harvest__image div:nth-child(3) {
@@ -377,5 +486,11 @@ a {
   background-size: cover;
   background-position: 0 -80px;
   margin: 15px;
+  overflow: hidden;
+}
+
+.harvest__image div:nth-child(3):hover img {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 /*# sourceMappingURL=style.css.map */
