@@ -244,6 +244,13 @@ a {
   border: 3px solid #C4C4C4;
 }
 
+@media (max-width: 1200px) {
+  .taste__content {
+    width: 800px;
+    height: 605px;
+  }
+}
+
 .taste h1 {
   margin-top: 60px;
   font-family: 'Playfair Display', serif;
@@ -263,6 +270,12 @@ a {
   width: 160px;
   background: #FFFFFF;
   border: 1px solid #FFFFFF;
+}
+
+@media (max-width: 1200px) {
+  .taste h1::before {
+    left: 325px;
+  }
 }
 
 .taste p {
@@ -604,7 +617,7 @@ a {
 
 @media (max-width: 1118px) {
   .feedback-info h1::after {
-    right: -278px;
+    right: -285px;
     width: 160px;
     height: 160px;
   }
@@ -650,9 +663,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 1100px;
@@ -661,7 +674,19 @@ a {
   border: 3px solid #C4C4C4;
 }
 
-.feedback form input {
+.feedback form .value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 450px;
+}
+
+.feedback form .value input {
   background: #282828;
   border: none;
   border-bottom: 1px solid #FFFFFF;
@@ -675,7 +700,7 @@ a {
   outline: none;
 }
 
-.feedback form input:nth-child(4) {
+.feedback form .value input:nth-child(3) {
   margin-top: 50px;
   width: 540px;
   height: 50px;
@@ -684,13 +709,17 @@ a {
   cursor: pointer;
 }
 
-.feedback form input:nth-child(4):hover {
+.feedback form .value input:nth-child(3):hover {
   background: #424141;
 }
 
 @media (max-width: 1200px) {
   .feedback form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     max-width: 950px;
+    padding: 0 200px 80px 200px;
   }
 }
 
