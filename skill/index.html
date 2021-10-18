@@ -26,17 +26,20 @@
       <h1>SKILL</h1>
       <h2>Санкт-Петербург</h2>
     </div>
-    <p>Организация по подбору персонала для выполнения электромонтажных работ</p>
+    <p>Подбор персонала для выполнения электромонтажных работ</p>
   </main>
   <feedback class="feedback">
-    <form action="post">
-      <input type="text" name="name" placeholder="Имя">
-      <input type="text" name="middlename" placeholder="Отчество">
-      <input type="text" name="family" placeholder="Фамилия">
-      <input type="number" name="phone" placeholder="Номер телефона">
-      <input type="text" name="sity" placeholder="Город проживания">
-      <input type="text" name="sity" placeholder="Где работал">
-      <input type="submit" value="Отправить">
+    <form action="./app/mail.php" method="POST">
+      <div class="personality">
+        <input type="text" name="name" placeholder="Имя">
+        <input type="text" name="middlename" placeholder="Отчество">
+        <input type="text" name="family" placeholder="Фамилия">
+        <input type="number" name="phone" placeholder="Номер телефона">
+        <input type="text" name="sity" placeholder="Город проживания">
+        <input type="text" name="invite" placeholder="Кто пригласил">
+        <textarea type="text" name="work" placeholder="Где работал"></textarea>
+        <input type="submit" value="Отправить">
+      </div>
     </form>
   </feedback>
 </body>
