@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/style/style.css">
+  <title>Autopole</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-logo">
+      <img src="./static/images/logo.svg" alt="logo">
+    </div>
+    <div class="header-nav">
+      <ul>
+        <li><a href="/">Поиск по VIN</a></li>
+        <li><a href="/contacts.html">Контакты</a></li>
+      </ul>
+    </div>
+  </header>
+  <main class="main">
+    <form action="" method="get">
+      <input type="text" name="search" id="vin" placeholder="Введите VIN номер">
+      <input type="submit" value="">
+    </form>
+    <h1>Вот, что удалось найти</h1>
+    <div class="main-result">
+      <div class="card">
+        <div class="card-img"></div>
+        <div class="card-info">
+          <h2>Land Rover Range Rover</h2>
+          <p class="card-info__year">2018</p>
+          <p class="card-info__run">65 622 км.</p>
+          <p class="card-info__price">8 489 000 ₽</p>
+          <div class="card-info__link">
+            <ul>
+              <li><a href="#">autoru</a></li>
+              <li><a href="#">avito</a></li>
+              <li><a href="#">drom</a></li>
+              <li><a href="#">PRO</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
