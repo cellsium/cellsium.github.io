@@ -94,6 +94,12 @@ body {
   text-transform: uppercase;
 }
 
+@media (max-width: 926px) and (max-height: 428px) and (orientation: landscape) {
+  .header-nav .btn {
+    width: 120px;
+  }
+}
+
 @media (max-height: 428px) and (orientation: landscape) {
   .header-nav .btn {
     height: 50px;
@@ -152,6 +158,7 @@ body {
 }
 
 .main-logo {
+  background-color: rgba(0, 0, 0, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,6 +177,7 @@ body {
   border: 4px solid #FFFFFF;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: pointer;
 }
 
 @media (max-height: 428px) and (orientation: landscape) {
@@ -186,7 +194,7 @@ body {
   }
 }
 
-.main-logo h1 {
+.main-logo name {
   position: relative;
   font-family: 'PT Sans', sans-serif;
   font-style: normal;
@@ -195,7 +203,7 @@ body {
   line-height: 54px;
 }
 
-.main-logo h1::before {
+.main-logo name::before {
   position: absolute;
   content: '';
   top: 50px;
@@ -204,7 +212,7 @@ body {
   background-color: #fff;
 }
 
-.main-logo h1::after {
+.main-logo name::after {
   position: absolute;
   content: '';
   top: 4px;
@@ -214,7 +222,7 @@ body {
   background-color: #fff;
 }
 
-.main-logo h2 {
+.main-logo sity {
   font-family: PT Sans;
   font-weight: normal;
   font-style: normal;
@@ -222,6 +230,41 @@ body {
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.main-logo:hover name:before {
+  width: 200px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.main-logo:hover name::after {
+  width: 200px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.main h1 {
+  position: relative;
+  margin: 80px 20px 0 20px;
+  font-family: 'PT Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  color: bisque;
+  cursor: pointer;
+}
+
+@media (max-width: 926px) and (max-height: 428px) and (orientation: landscape) {
+  .main h1 {
+    margin: 22px 20px 0 20px;
+    font-size: 20px;
+  }
+}
+
+.main h1:hover {
+  background-color: rgba(0, 0, 0, 0.658);
 }
 
 .main p {
@@ -233,19 +276,30 @@ body {
   font-size: 16px;
   line-height: 150%;
   text-align: center;
+  max-width: 900px;
+  cursor: pointer;
+}
+
+.main p:nth-child(2) {
   text-transform: uppercase;
 }
 
-@media (max-height: 428px) and (orientation: landscape) {
+@media (max-width: 926px) and (max-height: 428px) and (orientation: landscape) {
   .main p {
-    margin: 40px 20px 0 20px;
+    margin: 5px 20px 0 20px;
+    font-size: 15px;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 375px) and (max-height: 667px) and (orientation: landscape) {
   .main p {
-    font-size: 12px;
+    margin: 30px 20px 0 20px;
+    font-size: 14px;
   }
+}
+
+.main p:hover {
+  background-color: rgba(0, 0, 0, 0.658);
 }
 
 .feedback {

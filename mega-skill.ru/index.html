@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./static/images/favico.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=PT+Sans&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./static/style/style.css">
+  <title>Mega-Skill</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-name">MEGA-SKILL</div>
+    <div class="header-nav">
+      <button class="btn">Регистрация на обьект</button>
+    </div>
+  </header>
+  <main class="main">
+    <div class="main-logo">
+      <h1>MEGA-SKILL</h1>
+      <h2>Санкт-Петербург</h2>
+    </div>
+    <p>Подбор квалифицированных специалистов в области судостроения</p>
+  </main>
+  <div class="feedback">
+    <form id="form">
+      <div class="personality">
+        <input id="name" type="text" name="name" required placeholder="Имя">
+        <input id="middlename" type="text" name="middlename" required placeholder="Отчество">
+        <input id="family" type="text" name="family" required placeholder="Фамилия">
+        <input id="phone" type="number" name="phone" required placeholder="Номер телефона (88888888888)">
+        <input id="sity" type="text" name="sity" required placeholder="Город проживания">
+        <input id="skill" type="text" name="skill" required placeholder="опыт работы">
+        <input id="trip" type="text" name="trip" required placeholder="Готовность к командировкам (готов/не готов)">
+        <input id="team" type="text" name="team" required placeholder="Работа в коллективе">
+        <input id="group" type="text" name="group" required placeholder="Своя бригада людей">
+        <input id="invite" type="text" name="invite" placeholder="Кто пригласил">
+        <textarea id="work" type="text" name="work" required placeholder="Где работал" maxlength="1000"></textarea>
+        <p>Нажимая на кнопку, вы даете согласие на обработку своих персональных данных <a href="/document.pdf"
+            target="_blank" id="blank">Прочитать соглашение</a></p><input type="checkbox">
+        <input type="submit" value="Отправить">
+      </div>
+    </form>
+  </div>
+  <script src="./app/app.js"></script>
+</body>
